@@ -43,9 +43,51 @@
                     <a class="nav-link" href="#block5">Программы и утилиты</a>
                 </li>
             </ul>
+            <!--Кнопка-триггер модального окна-->
+            <button type="button" class="btn btn-outline-light me-5" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">Войти
+            </button>
         </div>
     </div>
 </nav>
+
+
+<!--Модальное окно-->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Вход в систему</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+            </div>
+            <div class="modal-body">
+                <!--Форма-->
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" aria-describedby="emailHelp">
+                    <label for="floatingInput">E-mail</label>
+                    <div id="emailHelp" class="form-text">Например, super.mario@gmail.com</div>
+                </div>
+                <div class="form-floating mb-4">
+                    <input type="password" class="form-control" id="floatingPassword" placeholder="Пароль" aria-describedby="passwordHelp">
+                    <label for="floatingPassword">Пароль</label>
+                    <div id="passwordHelp" class="form-text"><a href="#">Забыли пароль?</a></div>
+                </div>
+                <div class="form-check mb-4">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                    <label class="form-check-label" for="flexCheckChecked">
+                        Запомнить меня
+                    </label>
+                </div>
+                <hr class="mb-3">
+                <div class="form-text">Нет аккаунта? <a href="#">Зарегистрироваться!</a></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Закрыть</button>
+                <button type="button" class="btn btn-success">Войти</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 <!--  Carousel  -->
