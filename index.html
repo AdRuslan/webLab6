@@ -9,268 +9,386 @@
 </head>
 <body>
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top py-3">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">W3С</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
-                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Переключатель навигации">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                <li class="nav-item px-4">
-                    <a class="nav-link" href="#block1">Введение</a>
-                </li>
-                <li class="nav-item px-4">
-                    <a class="nav-link" href="#block2">Цели и задачи</a>
-                </li>
-                <li class="nav-item px-4">
-                    <a class="nav-link" href="#block3">Структура консорциума</a>
-                </li>
-                <li class="nav-item dropdown px-4">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                       data-bs-toggle="dropdown" aria-expanded="false">
-                        Утвержденные W3C
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#block4.1">Принципы и концепции</a></li>
-                        <li><a class="dropdown-item" href="#block4.2">Стандарты</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item px-4">
-                    <a class="nav-link" href="#block5">Программы и утилиты</a>
-                </li>
-            </ul>
-            <!--Кнопка-триггер модального окна-->
-            <button type="button" class="btn btn-outline-light me-5" data-bs-toggle="modal"
-                    data-bs-target="#exampleModal">Войти
+
+<header>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top py-3">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">W3С</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+                    aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Переключатель навигации">
+                <span class="navbar-toggler-icon"></span>
             </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item px-4">
+                        <a class="nav-link" href="#block1">Введение</a>
+                    </li>
+                    <li class="nav-item px-4">
+                        <a class="nav-link" href="#block2">Цели и задачи</a>
+                    </li>
+                    <li class="nav-item px-4">
+                        <a class="nav-link" href="#block3">Структура консорциума</a>
+                    </li>
+                    <li class="nav-item dropdown px-4">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            Утвержденные W3C
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#block4.1">Принципы и концепции</a></li>
+                            <li><a class="dropdown-item" href="#block4.2">Стандарты</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item px-4">
+                        <a class="nav-link" href="#block5">Программы и утилиты</a>
+                    </li>
+                </ul>
+                <!--Кнопка-триггер модального окна-->
+                <button type="button" class="btn btn-outline-light me-5" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">Войти
+                </button>
+            </div>
+        </div>
+    </nav>
+
+
+    <!--Модальное окно-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Вход в систему</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                </div>
+                <div class="modal-body">
+                    <!--Форма-->
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"
+                               aria-describedby="emailHelp">
+                        <label for="floatingInput">E-mail</label>
+                        <div id="emailHelp" class="form-text">Например, super.mario@gmail.com</div>
+                    </div>
+                    <div class="form-floating mb-4">
+                        <input type="password" class="form-control" id="floatingPassword" placeholder="Пароль"
+                               aria-describedby="passwordHelp">
+                        <label for="floatingPassword">Пароль</label>
+                        <div id="passwordHelp" class="form-text"><a href="#">Забыли пароль?</a></div>
+                    </div>
+                    <div class="form-check mb-4">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Запомнить меня
+                        </label>
+                    </div>
+                    <hr class="mb-3">
+                    <div class="form-text">Нет аккаунта? <a href="#">Зарегистрироваться!</a></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Закрыть</button>
+                    <button type="button" class="btn btn-success">Войти</button>
+                </div>
+            </div>
         </div>
     </div>
-</nav>
 
-
-<!--Модальное окно-->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Вход в систему</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
-            </div>
-            <div class="modal-body">
-                <!--Форма-->
-                <div class="form-floating mb-3">
-                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"
-                           aria-describedby="emailHelp">
-                    <label for="floatingInput">E-mail</label>
-                    <div id="emailHelp" class="form-text">Например, super.mario@gmail.com</div>
-                </div>
-                <div class="form-floating mb-4">
-                    <input type="password" class="form-control" id="floatingPassword" placeholder="Пароль"
-                           aria-describedby="passwordHelp">
-                    <label for="floatingPassword">Пароль</label>
-                    <div id="passwordHelp" class="form-text"><a href="#">Забыли пароль?</a></div>
-                </div>
-                <div class="form-check mb-4">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                    <label class="form-check-label" for="flexCheckChecked">
-                        Запомнить меня
-                    </label>
-                </div>
-                <hr class="mb-3">
-                <div class="form-text">Нет аккаунта? <a href="#">Зарегистрироваться!</a></div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Закрыть</button>
-                <button type="button" class="btn btn-success">Войти</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<!--  Carousel  -->
-<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-    <ol class="carousel-indicators">
-        <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
-        <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
-        <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img src="images/tim.jpg" class="d-block w-100" alt=" ">
-            <div class="carousel-caption d-none d-md-block">
-                <h5>Тим Бернерс-Ли</h5>
-            </div>
-        </div>
-        <div class="carousel-item">
-            <img src="images/w3c%20logo.jpg" class="d-block w-100" alt=" ">
-            <div class="carousel-caption d-none d-md-block">
-                <h5>Логотип W3C</h5>
-            </div>
-        </div>
-        <div class="carousel-item">
-            <img src="images/html_css.png" class="d-block w-100" alt=" ">
-            <div class="carousel-caption d-none d-md-block">
-                <h5>HTML и CSS</h5>
-            </div>
-        </div>
-    </div>
-    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Предыдущий</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Следующий</span>
-    </a>
-</div>
+</header>
 
 
 <!--Main-->
-<div class="container">
-
-    <!--Введение-->
-    <h2 class="display-6 my-4" id="block1"><strong>Введение</strong></h2>
-    <p>
-        W3С (англ. World Wide Web Consortium)
-        - организация, разрабатывающая и внедряющая технологические стандарты для Всемирной паутины. Консорциум
-        возглавляет Тим Бернерс-Ли, изобретатель HTTP, HTML, URI.
-    </p>
-    <p>Консорциум был создан в 1994 году как консультативный орган для лидеров компьютерной индустрии. Крупнейшие
-        мировые компании и корпорации договаривались в W3C об обеспечении совместимости своих продуктов и внедрении
-        новых технологических стандартов.
-
-        Первым крупным успехом Консорциума стала стандартизация языка гипертекстовой разметки англ. HyperText Markup
-        Language) в 1996 году. Дело в том, что в середине 1990-х годов ряд крупнейших производителей программного
-        обеспечения планировал выпустить каждый свою версию языка HTML со своими названиями тегов. Разумеется, это
-        привело бы к хаосу в Интернете, и в результате веб-страница одной компании была бы размечена совершенно не так,
-        как страница другой компании. Из-за этого веб-браузер одной компании не мог бы отображать страницы, созданные по
-        правилам другой компании. Именно W3C принадлежит заслуга в том, что HTML был выпущен с единым базовым набором
-        тегов и атрибутов и веб-страницы стали такими, какими мы их знаем сейчас. Хотя полного совпадения тегов и
-        атрибутов HTML достичь не удалось до сих пор.</p>
-
-    <!--Цели и задачи-->
-    <h2 class="display-6 my-4" id="block2"><strong>Цели и задачи</strong></h2>
-    <p>W3C разрабатывает для Интернета единые принципы и стандарты (называемые «Рекоменда́циями», англ. W3C
-        Recommendations), которые затем внедряются производителями программ и оборудования. Таким образом достигается
-        совместимость между программными продуктами и аппаратурой различных компаний, что делает Всемирную сеть более
-        совершенной, универсальной и удобной.
-
-        Миссия W3C: «Полностью раскрыть потенциал Всемирной паутины, путём создания протоколов и принципов,
-        гарантирующих долгосрочное развитие Сети».
-        Более конкретная цель W3C — помочь компьютерным программам достичь способности ко взаимодействию в Сети (т. н.
-        «сетева́я интеропера́бельность», англ. Web interoperability). Применение единых стандартов в Сети — это ключевой
-        шаг для достижения такого взаимодействия.
-
-        Две другие важнейшие задачи Консорциума — обеспечить полную «интернационализа́цию Сети́» и сделать Сеть
-        доступной для людей с ограниченными возможностями. Для решения первой задачи Консорциум активно сотрудничает с
-        организацией «Юнико́д» (англ. Unicode) и рядом других рабочих групп, занимающихся международным сотрудничеством
-        в Интернете и языковыми технологиями. Для решения второй задачи Консорциум не только сотрудничает с
-        организациями соответствующего профиля, но и разработал свои собственные Рекомендации, которые сейчас активно
-        набирают популярность.
-    </p>
-
-    <!--Структура консорциума-->
-    <h2 class="display-6 my-4" id="block3"><strong>Структура консорциума</strong></h2>
-    <p>Общую администрацию Консорциума Всемирной паутины осуществляют 3 организации:</p>
-    <ul>
-        <li>Массачусетсский технологический институт (англ. Massachusetts Institute of Technology, MIT) в США</li>
-        <li>Европейский консорциум по исследованиям в области информатики и математики (англ. European Research
-            Consortium for Informatics and Mathematics, ERCIM) во Франции;
-        </li>
-        <li>Университет Кейо (англ. Keio University) в Японии.</li>
-    </ul>
-
-    <!--Figure -->
-    <div class="text-center">
-        <figure class="figure my-4">
-            <img src="images/Universitet-MIT.jpg" class="figure-img img-fluid rounded" alt=" ">
-            <figcaption class="figure-caption">Знаменитый MIT - Массачусетсский технологический институт</figcaption>
-        </figure>
+<main>
+    <!--  Carousel  -->
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
+            <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
+            <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="images/tim.jpg" class="d-block w-100" alt=" ">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Тим Бернерс-Ли</h5>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/w3c%20logo.jpg" class="d-block w-100" alt=" ">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Логотип W3C</h5>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/html_css.png" class="d-block w-100" alt=" ">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>HTML и CSS</h5>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Предыдущий</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Следующий</span>
+        </a>
     </div>
 
-    <p>Членом Консорциума может стать юридическое или частное лицо, занимающееся веб-технологиями и заинтересованное в
-        развитии Интернета. Основным источником финансирования Консорциума являются членские взносы. Членами Консорциума
-        уже являются более 350 организаций.
 
-        Международную координацию осуществляют так называемые «офисы W3C» (англ. W3C Offices), которые созданы уже в 14
-        странах мира. Время от времени Консорциум Всемирной паутины также устраивает международные конференции.
+    <div class="container-md">
 
-        Процесс выработки Рекомендаций проходит в специальных группах. Рабочие и исследовательские группы Консорциума
-        включают штатный персонал, представителей организаций-членов и приглашённых экспертов. С предложениями в адрес
-        рабочих групп может выступить любое лицо, даже не члены W3C.</p>
+        <!--Введение-->
+        <h2 class="display-6 my-4" id="block1"><strong>Введение</strong></h2>
+        <p>
+            W3С (англ. World Wide Web Consortium)
+            - организация, разрабатывающая и внедряющая технологические стандарты для Всемирной паутины. Консорциум
+            возглавляет Тим Бернерс-Ли, изобретатель HTTP, HTML, URI.
+        </p>
+        <p>Консорциум был создан в 1994 году как консультативный орган для лидеров компьютерной индустрии. Крупнейшие
+            мировые компании и корпорации договаривались в W3C об обеспечении совместимости своих продуктов и внедрении
+            новых технологических стандартов.
+
+            Первым крупным успехом Консорциума стала стандартизация языка гипертекстовой разметки англ. HyperText Markup
+            Language) в 1996 году. Дело в том, что в середине 1990-х годов ряд крупнейших производителей программного
+            обеспечения планировал выпустить каждый свою версию языка HTML со своими названиями тегов. Разумеется, это
+            привело бы к хаосу в Интернете, и в результате веб-страница одной компании была бы размечена совершенно не
+            так,
+            как страница другой компании. Из-за этого веб-браузер одной компании не мог бы отображать страницы,
+            созданные по
+            правилам другой компании. Именно W3C принадлежит заслуга в том, что HTML был выпущен с единым базовым
+            набором
+            тегов и атрибутов и веб-страницы стали такими, какими мы их знаем сейчас. Хотя полного совпадения тегов и
+            атрибутов HTML достичь не удалось до сих пор.</p>
+
+        <!--Цели и задачи-->
+        <h2 class="display-6 my-4" id="block2"><strong>Цели и задачи</strong></h2>
+        <p>W3C разрабатывает для Интернета единые принципы и стандарты (называемые «Рекоменда́циями», англ. W3C
+            Recommendations), которые затем внедряются производителями программ и оборудования. Таким образом
+            достигается
+            совместимость между программными продуктами и аппаратурой различных компаний, что делает Всемирную сеть
+            более
+            совершенной, универсальной и удобной.
+
+            Миссия W3C: «Полностью раскрыть потенциал Всемирной паутины, путём создания протоколов и принципов,
+            гарантирующих долгосрочное развитие Сети».
+            Более конкретная цель W3C — помочь компьютерным программам достичь способности ко взаимодействию в Сети (т.
+            н.
+            «сетева́я интеропера́бельность», англ. Web interoperability). Применение единых стандартов в Сети — это
+            ключевой
+            шаг для достижения такого взаимодействия.
+
+            Две другие важнейшие задачи Консорциума — обеспечить полную «интернационализа́цию Сети́» и сделать Сеть
+            доступной для людей с ограниченными возможностями. Для решения первой задачи Консорциум активно сотрудничает
+            с
+            организацией «Юнико́д» (англ. Unicode) и рядом других рабочих групп, занимающихся международным
+            сотрудничеством
+            в Интернете и языковыми технологиями. Для решения второй задачи Консорциум не только сотрудничает с
+            организациями соответствующего профиля, но и разработал свои собственные Рекомендации, которые сейчас
+            активно
+            набирают популярность.
+        </p>
+
+        <!--Структура консорциума-->
+        <h2 class="display-6 my-4" id="block3"><strong>Структура консорциума</strong></h2>
+        <p>Общую администрацию Консорциума Всемирной паутины осуществляют 3 организации:</p>
+        <ul>
+            <li>Массачусетсский технологический институт (англ. Massachusetts Institute of Technology, MIT) в США</li>
+            <li>Европейский консорциум по исследованиям в области информатики и математики (англ. European Research
+                Consortium for Informatics and Mathematics, ERCIM) во Франции;
+            </li>
+            <li>Университет Кейо (англ. Keio University) в Японии.</li>
+        </ul>
+
+        <!--Figure -->
+        <div class="text-center">
+            <figure class="figure my-4">
+                <img src="images/Universitet-MIT.jpg" class="figure-img img-fluid rounded" alt=" ">
+                <figcaption class="figure-caption">Знаменитый MIT - Массачусетсский технологический институт
+                </figcaption>
+            </figure>
+        </div>
+
+        <p>Членом Консорциума может стать юридическое или частное лицо, занимающееся веб-технологиями и заинтересованное
+            в
+            развитии Интернета. Основным источником финансирования Консорциума являются членские взносы. Членами
+            Консорциума
+            уже являются более 350 организаций.
+
+            Международную координацию осуществляют так называемые «офисы W3C» (англ. W3C Offices), которые созданы уже в
+            14
+            странах мира. Время от времени Консорциум Всемирной паутины также устраивает международные конференции.
+
+            Процесс выработки Рекомендаций проходит в специальных группах. Рабочие и исследовательские группы
+            Консорциума
+            включают штатный персонал, представителей организаций-членов и приглашённых экспертов. С предложениями в
+            адрес
+            рабочих групп может выступить любое лицо, даже не члены W3C.</p>
 
 
-    <!--Принципы и концепции, утверждённые W3C-->
-    <h2 class="display-6 my-4" id="block4.1"><strong>Принципы и концепции, утверждённые W3C</strong></h2>
-    <div class="table-responsive">
-        <table class="table table-hover">
-            <thead>
-            <tr>
-                <th scope="col">№</th>
-                <th scope="col">Принцип или концепция</th>
-                <th scope="col">Пояснение</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Общедоступность (Accessibility)</td>
-                <td>Особый упор при реализации данного принципа делается на обеспечение доступности ресурсов Всемирной
-                    паутины для людей с ограниченными физическими возможностями.
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Аппаратная независимость (Device Independence)</td>
-                <td>Этот принцип утверждает, что ресурсы и протоколы не должны быть рассчитаны на конкретное физическое
-                    оборудование, а должны работать на любой аппаратуре.
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td>Интернационализация (Internationalization)</td>
-                <td>Здесь речь идёт, прежде всего, о доступности информации на всех языках мира, а не только на
-                    английском, а также возможность и равноправие использования национальных шрифтов в документах и
-                    системах разработанных на основе стандартов.
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">4</th>
-                <td>Патентная политика (Patent Policy)</td>
-                <td>Здесь речь идёт о патентовании рекомендаций W3C таким образом, чтобы их можно было внедрять
-                    бесплатно, на основе лицензии W3C Royalty-Free License.
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">5</th>
-                <td>Многоформенное взаимодействие (Multimodal Interaction)</td>
-                <td>Принцип утверждает, что у программ должно существовать много форм и режимов взаимодействия с
-                    пользователем.
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">6</th>
-                <td>Семантическая паутина (Semantic Web)</td>
-                <td>Это новая концепция развития Всемирной паутины, которая призвана сделать размещённую в Сети
-                    информацию более понятной для компьютеров. Иногда также упоминается как семантический веб.
-                    Семантическая паутина сейчас реализуется как надстройка над существующей Всемирной паутиной.
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">7</th>
-                <td>Мобильная паутина (Mobile Web Initiative, W3C-MWI)</td>
-                <td>Этот принцип определяет, что ресурсы Всемирной сети должны быть доступны для мобильных устройств.
-                </td>
-            </tr>
-            </tbody>
-        </table>
+        <!--Принципы и концепции, утверждённые W3C-->
+        <h2 class="display-6 my-4" id="block4.1"><strong>Принципы и концепции, утверждённые W3C</strong></h2>
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th scope="col">№</th>
+                    <th scope="col">Принцип или концепция</th>
+                    <th scope="col">Пояснение</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Общедоступность (Accessibility)</td>
+                    <td>Особый упор при реализации данного принципа делается на обеспечение доступности ресурсов
+                        Всемирной
+                        паутины для людей с ограниченными физическими возможностями.
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Аппаратная независимость (Device Independence)</td>
+                    <td>Этот принцип утверждает, что ресурсы и протоколы не должны быть рассчитаны на конкретное
+                        физическое
+                        оборудование, а должны работать на любой аппаратуре.
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Интернационализация (Internationalization)</td>
+                    <td>Здесь речь идёт, прежде всего, о доступности информации на всех языках мира, а не только на
+                        английском, а также возможность и равноправие использования национальных шрифтов в документах и
+                        системах разработанных на основе стандартов.
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>Патентная политика (Patent Policy)</td>
+                    <td>Здесь речь идёт о патентовании рекомендаций W3C таким образом, чтобы их можно было внедрять
+                        бесплатно, на основе лицензии W3C Royalty-Free License.
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td>Многоформенное взаимодействие (Multimodal Interaction)</td>
+                    <td>Принцип утверждает, что у программ должно существовать много форм и режимов взаимодействия с
+                        пользователем.
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">6</th>
+                    <td>Семантическая паутина (Semantic Web)</td>
+                    <td>Это новая концепция развития Всемирной паутины, которая призвана сделать размещённую в Сети
+                        информацию более понятной для компьютеров. Иногда также упоминается как семантический веб.
+                        Семантическая паутина сейчас реализуется как надстройка над существующей Всемирной паутиной.
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">7</th>
+                    <td>Мобильная паутина (Mobile Web Initiative, W3C-MWI)</td>
+                    <td>Этот принцип определяет, что ресурсы Всемирной сети должны быть доступны для мобильных
+                        устройств.
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+        <!--Стандарты, утверждённые W3C-->
+        <h2 class="display-6 my-4" id="block4.2"><strong>Стандарты, утверждённые W3C</strong></h2>
+        <div class="row gx-5">
+
+            <div class="col-sm-6 col-lg-2">
+                <ul>
+                    <li>Annotea</li>
+                    <li>CC/PP</li>
+                    <li>Compound Document Formats</li>
+                    <li>CSS</li>
+                    <li>DOM</li>
+                    <li>HTML</li>
+                    <li>HTTP</li>
+                    <li>InkML</li>
+                    <li>MathML</li>
+                </ul>
+            </div>
+
+            <div class="col-sm-6 col-lg-2">
+                <ul>
+                    <li>OWL</li>
+                    <li>PICS</li>
+                    <li>PNG</li>
+                    <li>P3P</li>
+                    <li>RDF</li>
+                    <li>SMIL</li>
+                    <li>SOAP/XMLP</li>
+                    <li>SPARQL</li>
+                    <li>Style</li>
+                </ul>
+            </div>
+
+            <div class="col-sm-6 col-lg-2">
+                <ul>
+                    <li>SVG</li>
+                    <li>TAG</li>
+                    <li>Timed Text</li>
+                    <li>URI/URL</li>
+                    <li>Voice Browser</li>
+                    <li>WAI</li>
+                    <li>WAI-ARIA</li>
+                    <li>WebCGM</li>
+                    <li>Web Services</li>
+                </ul>
+            </div>
+
+            <div class="col-sm-6 col-lg-2">
+                <ul>
+                    <li>XForms</li>
+                    <li>XHTML</li>
+                    <li>XInclude</li>
+                    <li>XLink</li>
+                    <li>XML</li>
+                    <li>XML Base</li>
+                    <li>XML Binary Characterization</li>
+                    <li>XML Encryption</li>
+                    <li>XML Key Management</li>
+                </ul>
+            </div>
+
+            <div class="col-sm-6 col-lg-2">
+                <ul>
+                    <li>XML Query</li>
+                    <li>XML Schema</li>
+                    <li>XML Signature</li>
+                    <li>XPath</li>
+                    <li>XPointer</li>
+                    <li>MXSL и XSLT</li>
+                </ul>
+            </div>
+        </div>
+
+        <!--Программы и утилиты, созданные W3C-->
+        <h2 class="display-6 my-4" id="block5"><strong>Программы и утилиты, созданные W3C</strong></h2>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item list-group-item-action">Amaya (браузер и WYSIWYG-редактор)</li>
+            <li class="list-group-item list-group-item-action">CSS Validator</li>
+            <li class="list-group-item list-group-item-action">HTML Tidy</li>
+            <li class="list-group-item list-group-item-action">HTML Validator</li>
+            <li class="list-group-item list-group-item-action">Jigsaw (сервер)</li>
+            <li class="list-group-item list-group-item-action">Libwww (Web API, больше не поддерживается)</li>
+            <li class="list-group-item list-group-item-action">Quality Assurance, QA (утилиты для проверки качества)
+            </li>
+            <li class="list-group-item list-group-item-action">и другие</li>
+        </ul>
+
     </div>
+</main>
 
-</div>
+
+<!--Footer-->
+<footer class="mt-5 bg-dark py-4">
+    <div class="fs-3 text-light text-center">Выполнил: Адигамов Руслан гр.201-321</div>
+</footer>
 
 
 <!-- JavaScript Bundle with Popper -->
